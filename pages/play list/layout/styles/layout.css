@@ -301,16 +301,14 @@ background-color: rgba(255,255,255,0.31);
 background-image: linear-gradient(180deg, #FFFFFF 0%, #010316 79%);
 }
 
-
-.frame{
+.frame ul{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 80px;
-  width: 350px;
   position: relative;
-   box-shadow:
+  box-shadow:
    -7px -7px 20px 0px #fff9,
    -4px -4px 5px 0px #fff9,
    7px 7px 20px 0px #0002,
@@ -328,6 +326,7 @@ background-image: linear-gradient(180deg, #FFFFFF 0%, #010316 79%);
   border-radius: 3px;
   background: #e0e5ec;
   display: flex;
+ 
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -352,5 +351,6 @@ background-image: linear-gradient(180deg, #FFFFFF 0%, #010316 79%);
     inset -4px -4px 6px 0 rgba(255,255,255,.5),
     inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
 }
+
 
 /* -------------------------------------------------------------- */
