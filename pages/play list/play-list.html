@@ -195,7 +195,6 @@
 					</div>
 				</div>
 			</section>
-			
 			<section class="container w-100 my-2 p-3 ">
 				<span></span>
 				<span></span>
@@ -321,14 +320,24 @@
 	</footer>
 
 	<!--	Start Footer	-->
-	<footer class=" footer navbar navbar-expand navbar-dark fixed-bottom ">
+	<footer class=" footer navbar navbar-expand navbar-dark fixed-bottom py-2">
+		<!--- duration part --->
+		<div class="duration play fixed-bottom">
+			<div class="container-fluid py-3">
+				<input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+				<button style="background:rgba(0,0,0,.0);border:none" onclick="justplay()" id="play"><i
+						class="fa fa-play" aria-hidden="true"></i></button>
+				<button style="background:rgba(0,0,0,.0);border:none" class="" id="auto" onclick="autoplay_switch()"><i
+						class="fas fa-sync-alt fa-1x" aria-hidden="true"></i></button>
+			</div>
+		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="navbar-nav mr-auto  w-100 justify-content-between ">
 				<li class="nav-item active mx-2">
-					<a class="nav-link active" href="index.html"><i class="fas fa-home fa-2x text-danger"></i></a>
+					<a class="nav-link active" href="../../index.html"><i class="fas fa-home fa-2x text-danger"></i></a>
 				</li>
 				<li class="nav-item  mx-2">
-					<a class="nav-link" href="pages/list Favorite/list-favorite.html"><i
+					<a class="nav-link" href="../../pages/list Favorite/list-favorite.html"><i
 							class="fas fa-heart fa-2x"></i></a>
 				</li>
 				<li class="nav-item mx-2">
@@ -340,9 +349,10 @@
 			</ul>
 		</div>
 	</footer>
+
 	<!--	End Footer	-->
 
-	
+
 	<!-- bootstrap js -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
