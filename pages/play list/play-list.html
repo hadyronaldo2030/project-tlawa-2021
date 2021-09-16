@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+	<title>تلاوة</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="//db.onlinewebfonts.com/c/7712e50ecac759e968ac145c0c4a6d33?family=Droid+Arabic+Kufi" rel="stylesheet"
+		type="text/css" />
+	<link href="fonts/all.css" rel="stylesheet" type="text/css" />
+	<link rel='stylesheet' href='https:////fonts.googleapis.com/css?family=Roboto+Condensed:700'>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+	<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+	<link href="layout/styles/playlist.css" rel="stylesheet" type="text/css" media="all">
+
+	<!-- <link rel="stylesheet" href="./layout/styles/style.css"> -->
+
+</head>
+
+<body>
+	<!--	Start navbar	-->
+	<nav class="navbar navbar-expand-lg navbar-light p-3 sticky-top">
+		<div class="container">
+			<div class="logo">
+				<a class="navbar-brand" href="../../index.html">
+					<img class="img-fluid" src="images/d1ee98b4d5d08feb37ef069a74ed8472 (2).png" alt="">
+				</a>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto justify-content-center w-50">
+					<li class="nav-item mx-2">
+						<a class="nav-link " href="../../index.html">الرئـيـسـيـة <span
+								class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item mx-2">
+						<a class="nav-link" href="../../pages/quran-bdf/quran-bdf.html">القرآن <span
+								class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item mx-2">
+						<a class="nav-link" href="../../pages/ahades-audio/ahades-audio.html">الأحـاديـث</a>
+					</li>
+				</ul>
+
+				<form class="form-inline my-2 my-lg-0 button" autocomplete="off">
+					<div class="finder">
+						<div class="finder__outer">
+							<div class="finder__inner">
+								<div class="finder__icon" ref="icon">
+									<i class="fa fa-search fa-2x"></i>
+								</div>
+								<input class="form-control mr-sm-2 finder__input" type="search text" name="q">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</nav>
+	<!--	End navbar	-->
+
+
+	<!--	Start Playlist	-->
+	<div class="playlist h-100 overflow-hidden">
+		<div class="container">
+			<header class="mt-3">
+				<button class="open-side" style="background:rgba(0,0,0,.0);border:none;">
+					<svg style="height:35; width: 35px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+						fill="currentColor" class="bi bi-music-note-list" viewBox="0 0 16 16">
+						<path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z" />
+						<path fill-rule="evenodd" d="M12 3v10h-1V3h1z" />
+						<path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z" />
+						<path fill-rule="evenodd"
+							d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z" />
+					</svg>
+				</button>
+			</header>
+
+			<div class="main-openAudio my-4 row d-none ">
+
+				<!--- left part --->
+				<div class="left col-lg-7 m-auto">
+
+					<!--- song img --->
+					<img src="../images/wave.jpg" alt="الفاتحة" id="track_image">
+
+				</div>
+
+				<!--- right part --->
+				<div class="right col-lg-5 my-3">
+					<!--- song title & artist name --->
+					<div class="song_detail text-center text-dark m-auto">
+						<p  class="mb-3" id="title">title.mp3</p>
+						<p  class="mb-3" id="artist">Artist name</p>
+					</div>
+
+					<!--- middle part --->
+					<div class="middle my-4">
+						<button class="m-auto" onclick="next_song()" id="next"><i class="fa fa-step-forward"
+								aria-hidden="true"></i></button>
+						<button class="m-auto" onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+						<button class="m-auto" onclick="previous_song()" id="pre"><i class="fa fa-step-backward"
+								aria-hidden="true"></i></button>
+					</div>
+					<div class="volume m-auto my-3">
+						<p id="volume_show">100 </p>
+						<i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+						<input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+
+
+		<div class="container">
+			<main class="my-5 w-100 row">
+				<h1 class="m-5 text-start w-100 text-right">تلاوة القرآن الكريم</h1>
+				<button class="open-side btn button m-5 d-inline-block p-2">
+					استمع الان <i class="fa fa-headphones mx-3"></i>
+				</button>
+			</main>
+		</div>
+		<aside class="h-100 ">
+			<!--  header	-->
+			<header class="w-100 my-3 container">
+				<button class="open-side" style="background:rgba(0,0,0,.0);border:none;">
+					<i style="height:35; width: 35px;" class="far fa-times-circle text-white"></i>
+				</button>
+			</header>
+
+			<!--  sections	-->
+
+			<section class="container w-100 my-2 p-3 active-play">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<div class="d-flex row">
+					<img class="img p-1"
+						src="https://i1.wp.com/hefzmoyaser.com/wp-content/uploads/2020/11/%D9%81%D8%B6%D8%A7%D8%A6%D9%84-%D9%88%D8%AE%D8%B5%D8%A7%D8%A6%D8%B5-%D8%B3%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D9%81%D8%A7%D8%AA%D8%AD%D8%A9.jpg?zoom=2&resize=780%2C470&ssl=1"
+						alt="الفاتحة">
+					<div class="col-10 align-items-center w-100">
+						<h4 class=" text-info p-2 text-right"><strong>سورة : </strong> الفاتحة</h4>
+						<div class="row text-center icons">
+							<i class="col">
+								<h4 class=" text-white p-2 text-right">صــ(1)ــ </h4>
+							</i>
+							<button class="mb-3 col" style="background:rgba(0,0,0,.0);border:none;">
+								<i class="fas fa-sync-alt text-white"></i>
+							</button>
+							<button class="mb-3 col" style="background:rgba(0,0,0,.0);border:none;">
+								<i class="fas  fa-heart text-white"></i>
+							</button>
+							<button class="open-side openAudio mb-3 col" style="background:rgba(0,0,0,.0);border:none;">
+								<i class="fas fa-play text-white"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="container w-100 my-2 p-3">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<div class="d-flex row">
+					<img class="img p-1"
+						src="https://i1.wp.com/hefzmoyaser.com/wp-content/uploads/2020/11/%D9%81%D8%B6%D8%A7%D8%A6%D9%84-%D9%88%D8%AE%D8%B5%D8%A7%D8%A6%D8%B5-%D8%B3%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D9%81%D8%A7%D8%AA%D8%AD%D8%A9.jpg?zoom=2&resize=780%2C470&ssl=1"
+						alt="الفاتحة">
+					<div class="col-10 align-items-center w-100">
+						<h4 class=" text-info p-2 text-right"><strong>سورة : </strong> الأخلاص</h4>
+						<div class="row text-center icons">
+							<i class="col">
+								<h4 class=" text-white p-2 text-right">صــ(2)ــ </h4>
+							</i>
+							<button class="mb-3 col" style="background:rgba(0,0,0,.0);border:none;">
+								<i class="fas fa-sync-alt text-white"></i>
+							</button>
+							<button class="mb-3 col" style="background:rgba(0,0,0,.0);border:none;">
+								<i class="fas  fa-heart text-white"></i>
+							</button>
+							<button class="open-side openAudio mb-3 col" style="background:rgba(0,0,0,.0);border:none;">
+								<i class="fas fa-play text-white"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="container w-100 my-2 p-3 ">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<div class="d-flex row">
+					<img class="img p-1"
+						src="https://i1.wp.com/hefzmoyaser.com/wp-content/uploads/2020/11/%D9%81%D8%B6%D8%A7%D8%A6%D9%84-%D9%88%D8%AE%D8%B5%D8%A7%D8%A6%D8%B5-%D8%B3%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D9%81%D8%A7%D8%AA%D8%AD%D8%A9.jpg?zoom=2&resize=780%2C470&ssl=1"
+						alt="الفاتحة">
+					<div class="col-10 align-items-center w-100">
+						<h4 class=" text-info p-2 text-right"><strong>سورة : </strong> الفلق</h4>
+						<div class="row text-center icons">
+							<i class="col">
+								<h4 class=" text-white p-2 text-right">صــ(3)ــ </h4>
+							</i>
+							<button class="mb-3 col" style="background:rgba(0,0,0,.0);border:none;">
+								<i class="fas fa-sync-alt text-white"></i>
+							</button>
+							<button class="mb-3 col" style="background:rgba(0,0,0,.0);border:none;">
+								<i class="fas  fa-heart text-white"></i>
+							</button>
+							<button class="open-side openAudio mb-3 col" style="background:rgba(0,0,0,.0);border:none;">
+								<i class="fas fa-play text-white"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="container w-100 my-2 p-3 ">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<div class="d-flex row">
+					<img class="img p-1"
+						src="https://i1.wp.com/hefzmoyaser.com/wp-content/uploads/2020/11/%D9%81%D8%B6%D8%A7%D8%A6%D9%84-%D9%88%D8%AE%D8%B5%D8%A7%D8%A6%D8%B5-%D8%B3%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D9%81%D8%A7%D8%AA%D8%AD%D8%A9.jpg?zoom=2&resize=780%2C470&ssl=1"
+						alt="الفاتحة">
+					<div class="col-10 align-items-center w-100">
+						<h4 class=" text-info p-2 text-right"><strong>سورة : </strong> الناس</h4>
+						<div class="row text-center icons">
+							<i class="col">
+								<h4 class=" text-white p-2 text-right">صــ(4)ــ </h4>
+							</i>
+							<button class="mb-3 col" style="background:rgba(0,0,0,.0);border:none;">
+								<i class="fas fa-sync-alt text-white"></i>
+							</button>
+							<button class="mb-3 col" style="background:rgba(0,0,0,.0);border:none;">
+								<i class="fas  fa-heart text-white"></i>
+							</button>
+							<button class="open-side openAudio mb-3 col" style="background:rgba(0,0,0,.0);border:none;">
+								<i class="fas fa-play text-white"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="container w-100 my-2 p-3 ">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<div class="d-flex row">
+					<img class="img p-1"
+						src="https://i1.wp.com/hefzmoyaser.com/wp-content/uploads/2020/11/%D9%81%D8%B6%D8%A7%D8%A6%D9%84-%D9%88%D8%AE%D8%B5%D8%A7%D8%A6%D8%B5-%D8%B3%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D9%81%D8%A7%D8%AA%D8%AD%D8%A9.jpg?zoom=2&resize=780%2C470&ssl=1"
+						alt="الفاتحة">
+					<div class="col-10 align-items-center w-100">
+						<h4 class=" text-info p-2 text-right"><strong>سورة : </strong> الكافرون</h4>
+						<div class="row text-center icons">
+							<i class="col">
+								<h4 class=" text-white p-2 text-right">صــ(5)ــ </h4>
+							</i>
+							<button class="mb-3 col" style="background:rgba(0,0,0,.0);border:none;">
+								<i class="fas fa-sync-alt text-white"></i>
+							</button>
+							<button class="mb-3 col" style="background:rgba(0,0,0,.0);border:none;">
+								<i class="fas  fa-heart text-white"></i>
+							</button>
+							<button class="open-side openAudio mb-3 col" style="background:rgba(0,0,0,.0);border:none;">
+								<i class="fas fa-play text-white"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+
+
+		</aside>
+	</div>
+	<!--	End Playlist	-->
+
+	<!--	Start Footer	-->
+	<footer class="mt-5">
+		<div class="site-section">
+			<div class="container">
+				<ul class="list-unstyled social mt-3 text-center">
+					<div class="frame m-auto">
+						<a href="#" class="btn-shadow">
+							<i class="fab fa-facebook-f" style="color: #3b5998;"></i>
+						</a>
+						<a href="#" class="btn-shadow">
+							<i class="fab fa-google-plus-g" style="color: #FF3524;"></i>
+						</a>
+						<a href="#" class="btn-shadow">
+							<i class="fa fa-phone-alt" style="color: #280412;"></i>
+						</a>
+						<a href="#" class="btn-shadow">
+							<i class="fab fa-linkedin-in" style="color:#0e76a8;"></i>
+						</a>
+						<a href="#" class="btn-shadow">
+							<i class="fab fa-github" style="color: #280412;"></i>
+						</a>
+						<a href="#" class="btn-shadow">
+							<i class="far fa-envelope"></i>
+						</a>
+					</div>
+				</ul>
+			</div>
+			<div class="text-center pb-5 mb-5">
+				<p>Copyright &copy; 2021 - All Rights Reserved - <span class="d-inline-block text-info">Hady-Rabie </span></p>
+			</div>
+		</div>
+	</footer>
+
+	<!--	Start Footer	-->
+	<footer class=" footer navbar navbar-expand navbar-dark fixed-bottom py-2">
+		<!--- duration part --->
+		<div class="duration play fixed-bottom">
+			<div class="container-fluid py-3">
+				<input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+				<button style="background:rgba(0,0,0,.0);border:none" onclick="justplay()" id="play"><i
+						class="fa fa-play" aria-hidden="true"></i></button>
+				<button style="background:rgba(0,0,0,.0);border:none" class="" id="auto" onclick="autoplay_switch()"><i
+						class="fas fa-sync-alt fa-1x" aria-hidden="true"></i></button>
+			</div>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav mr-auto  w-100 justify-content-between ">
+				<li class="nav-item active mx-2">
+					<a class="nav-link active" href="../../index.html"><i class="fas fa-home fa-2x text-danger"></i></a>
+				</li>
+				<li class="nav-item  mx-2">
+					<a class="nav-link" href="../../pages/list Favorite/list-favorite.html"><i
+							class="fas fa-heart fa-2x"></i></a>
+				</li>
+				<li class="nav-item mx-2">
+					<a class="nav-link" href="#"><i class="fas fa-book-open fa-2x"></i></a>
+				</li>
+				<li class="nav-item  mx-2">
+					<a class="nav-link" href="#"><i class="fas fa-search fa-2x"></i></a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+
+	<!--	End Footer	-->
+
+
+	<!-- bootstrap js -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+
+	<!-- jquery specific -->
+	<script src="layout/scripts/jquery.easypiechart.min.js"></script>
+
+
+	<!-- font awesmoe -->
+	<script src="layout/scripts/jquery-3.4.1.min.js"></script>
+	<script src="layout/scripts/jquery.nicescroll.min.js"></script>
+	<script src="fonts/all.js"></script>
+	<script src="layout/scripts/index.js"></script>
+	<script src="layout/scripts/playlist.js"></script>
+
+
+
+
+</body>
+
+</html>

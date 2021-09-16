@@ -1,0 +1,132 @@
+http://127.0.0.1:57636/preview/app/index.htmlhttp://127.0.0.1:57636/preview/app/index.htmlhttp://127.0.0.1:57636/preview/app/index.htmlhttp://127.0.0.1:57636/preview/app/index.htmlhttp://127.0.0.1:57636/preview/app/index.htmlcardcardcardcardcardbody{
+	font-family: "Droid Arabic Kufi",  "serif" ,"UthmanicHafs1";
+}
+body{overflow-x: hidden;
+	   background: #e0e5ec;
+
+  font-family: "Droid Arabic Kufi",  "serif" ;}
+/*------------------------------scroll---------------------------------*/
+
+
+/*------------------------------scroll---------------------------------*/
+nav{
+	font-weight: 700;
+		  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.logo img {
+	width: 50px;
+}
+.navbar-toggler{
+	border: none
+}
+
+
+/*------------------------------header---------------------------------*/
+.side-bar{
+	height: 100%;
+	border-radius: 15px;
+	box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+}
+header .side-bar a {
+	font-weight: 600;
+	
+}
+/*________________box text____________________*/
+/* box text */
+.box-text p{
+	align-items: center;
+/*	word-spacing: 10px;*/
+	text-align:justify;
+/*	word-wrap: break-word;*/
+}
+
+/* 
+/*-----------------------------bdf----------------------------------*/
+
+.bdf{
+	border-radius: 20px;
+	box-shadow:
+	  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+	  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+	  0 12.5px 10px rgba(0, 0, 0, 0.06),
+	  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+	  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+	  0 100px 80px rgba(0, 0, 0, 0.12);
+	height: 600px;
+}
+header .card{height: 400px;}
+/*-----------------------------nav-footer----------------------------------*/
+.footer ul li svg{
+	color: #FFB6B7
+}
+.footer{
+background-color: rgba(255,255,255,0.31);
+background-image: linear-gradient(180deg, #FFFFFF 0%, #010316 79%);
+}
+
+
+.frame{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  width: 350px;
+  position: relative;
+   box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,
+   inset 0px 0px 0px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
+ transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
+   border-radius: 10px;
+}
+
+.btn-shadow{
+  height: 35px;
+  width: 35px;
+  border-radius: 3px;
+  background: #e0e5ec;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,
+   inset 0px 0px 0px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
+ transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
+  font-size: 16px;
+  color: rgba(42, 52, 84, 1);
+  text-decoration: none;
+}
+.frame .btn:active{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+}
+
+/* -------------------------------------------------------------- */
